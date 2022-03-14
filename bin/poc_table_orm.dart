@@ -13,6 +13,7 @@ void main(List<String> arguments) {
   });
 
   table.find(1, columns: ['name', 'age']);
+  table.all(columns: ['name', 'age']);
 }
 
 class TablePessoa<E> extends ITableModel<E> {

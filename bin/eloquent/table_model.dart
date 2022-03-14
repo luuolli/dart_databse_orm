@@ -30,6 +30,12 @@ abstract class ITableModel<E> {
     print(query);
   }
 
+  void all({List<String>? columns}) {
+    final query =
+        '''SELECT ${columns == null ? '*' : columns.join(',')} FROM $tableName;''';
+    print(query);
+  }
+
   Iterable<String> _columnsFromFields(Map<String, dynamic> fields) {
     return fields.keys;
   }
